@@ -54,7 +54,7 @@ jobs:
 
       - name: Run Socket Security Scan
         env:
-          SOCKET_SECURITY_API_KEY: ${{ secrets.SOCKET_SECURITY_API_KEY }}
+          SOCKET_SECURITY_API_KEY: ${{ secrets.SOCKET_SECURITY_API_KEY }} # zizmor: ignore[secrets-outside-env]
           PYTHONUNBUFFERED: "1"
           ENABLE_REACHABILITY: ${{ github.event.inputs.enable_reachability }}
         run: |
